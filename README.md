@@ -10,6 +10,7 @@ The assignment consists of questions that cover fundamentals of data engineering
 * MySQL_solution - Queries are written in MySQL.txt file with the result.
 * Racial_slur_python - Python program to find the degree of profanity in given tweets and a demo file of tweets
 * Shell_scripting - Shell script to extract the required data fields and output file
+* Intresting_dataset - A dataset build by Meta.
 
 ## Results
 * MySQL_solution - Exact result obtained.
