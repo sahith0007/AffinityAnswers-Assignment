@@ -1,0 +1,37 @@
+a. How many types of tigers can be found in the taxonomy table of the dataset? What is the "ncbi_id" of the Sumatran Tiger?
+sol:    Types of Tigers:
+            query:
+                SELECT ncbi_id,species FROM taxonomy WHERE species LIKE '%Panthera tigris%'
+            result:
+                ncbi_id,species
+                9694,"Panthera tigris (tiger)"
+                74533,"Panthera tigris altaica (Amur tiger)"
+                253258,"Panthera tigris amoyensis (Amoy tiger)"
+                74534,"Panthera tigris corbetti (Indochinese tiger)"
+                419130,"Panthera tigris jacksoni (Malayan tiger)"
+                644771,"Panthera tigris sondaica (Javan tiger)"
+                9695,"Panthera tigris sumatrae (Sumatran tiger)"
+                74535,"Panthera tigris tigris (Bengal tiger)"
+            for count:
+                SELECT COUNT(*) AS no_of_types FROM taxonomy WHERE species LIKE '%Panthera tigris%'
+            result:
+                no_of_types
+                8
+
+        Id of Sumatran tiger:
+            query:
+                SELECT ncbi_id,species FROM taxonomy WHERE species LIKE '%Sumatran tiger%'
+            result:
+                ncbi_id,species
+                9695,"Panthera tigris sumatrae (Sumatran tiger)"
+
+
+b. Find all the columns that can be used to connect the tables in the given database
+sol:    ncbi_id from taxonomy
+        ncbi_id from rfamseq
+        rfamseq_acc from rfamseq
+        rfamseq_acc from full_region
+        rfam_acc from family
+        rfam_acc from full_region
+        clan_acc from clan_membership
+        clan_acc from clan_membership
